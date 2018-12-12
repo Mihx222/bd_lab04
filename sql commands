@@ -1,0 +1,38 @@
+Print rows from different tables
+
+SELECT o.ID, c.Name AS cName, p.Name AS pName, p.Description, oi.quantity FROM orderdata o INNER JOIN customer c ON o.customer_id = c.ID INNER JOIN orderitem oi ON oi.order_id = o.ID INNER JOIN product p ON oi.product_id = p.ID;
+
+
+
+https://stackoverflow.com/questions/37367992/php-inserting-values-from-the-form-into-mysql
+
+
+
+https://stackoverflow.com/questions/17902483/show-values-from-a-mysql-database-table-inside-a-html-table-on-a-webpage
+
+
+-- Inserarea in tabelul customer
+INSERT INTO customer (name, address) VALUES ('Printesa', 'Palatul regelui si reginei');
+
+INSERT INTO customer (name, address) VALUES ('Printul', 'Palatul regelui si reginei');
+
+--Inserarea in tabelul comanda
+INSERT INTO comanda(customer_id) VALUES (1);
+
+INSERT INTO comanda(customer_id) VALUES (2);
+
+--Inserarea in tabelul product
+INSERT INTO product (name, description) VALUES ('Rochie pentru nunta', 'Rochie pentru nunta cusuta din materiale de calitate inalta');
+
+INSERT INTO product (name, description) VALUES ('Costum pentru nunta', 'Costum pentru nunta cusut din materiale de calitate inalta');
+
+--Inserarea in tabelul order_item
+INSERT INTO order_item (order_id, product_id, quantity) VALUES (1, 1, 1);
+
+INSERT INTO order_item (order_id, product_id, quantity) VALUES (2, 2, 2);
+
+
+
+
+next order ID
+11
